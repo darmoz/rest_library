@@ -13,4 +13,7 @@ public interface BookDao extends CrudRepository<Book, Long> {
     @Override
     Optional<Book> findById(Long id);
 
+    @Override
+    void delete(Book book);
+
 }

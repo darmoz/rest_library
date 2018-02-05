@@ -1,8 +1,6 @@
 package com.library.library.domain;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -10,8 +8,6 @@ import javax.validation.constraints.NotNull;
 
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity(name = "BOOK")
 public class Book {
     @Id
@@ -25,4 +21,13 @@ public class Book {
     private String author;
     @Column(name = "PUBLICATION_YEAR")
     private int publicationYear;
+
+    public Book() {
+    }
+
+    public Book(String title, String author, int publicationYear) {
+        this.title=title;
+        this.author=author;
+        this.publicationYear=publicationYear;
+    }
 }

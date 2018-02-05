@@ -12,8 +12,9 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class RentedDto {
-    private int copyId;
-    private Long userId;
+    private long rentId;
+    private long copyId;
+    private long userId;
     private Date rentDate;
     private Date returnDate;
 }

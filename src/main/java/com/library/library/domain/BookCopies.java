@@ -10,17 +10,22 @@ import javax.validation.constraints.NotNull;
 
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity(name = "COPIES")
 public class BookCopies {
     @Id
     @GeneratedValue
     @NotNull
     @Column(name = "COPY_ID", unique = true)
-    private int copyId;
+    private long copyId;
     @Column(name = "BOOK_ID")
-    private Long bookId;
+    private long bookId;
     @Column(name = "STATUS")
     private String status;
+
+    public BookCopies() {
+    }
+
+    public BookCopies(String status) {
+        this.status=status;
+    }
 }
